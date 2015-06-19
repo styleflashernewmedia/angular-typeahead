@@ -106,7 +106,8 @@ angular.module('siyfion.sfTypeahead', [])
             var value = element.val();
             element.typeahead('destroy');
             element.typeahead(scope.options, scope.datasets)
-            ngModel.$setViewValue(value);
+            // commented out setViewValue because it marks the model dirty on initialization
+            //ngModel.$setViewValue(value);
             element.triggerHandler('typeahead:opened');
           }
         }
